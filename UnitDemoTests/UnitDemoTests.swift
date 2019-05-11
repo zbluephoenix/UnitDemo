@@ -29,18 +29,12 @@ class UnitDemoTests: XCTestCase {
         
         let window = UIApplication.shared.keyWindow!
         
-        var showView = window.viewWithTag(100)
+        let showView = window.viewWithTag(100)
         XCTAssert((showView != nil), "not find tag 100")
-        XCTAssertEqual(showView!.backgroundColor, .black)
-
-        vc.hideViewFromWindow()
-        
-        showView = window.viewWithTag(100)
-        let flag = (showView != nil)
-        XCTAssert(flag, "not find tag 100")
-        if flag {
-            XCTAssertEqual(showView!.backgroundColor, .black)
+        if let view = showView {
+            XCTAssertEqual(view.backgroundColor, .red)
         }
+
     }
     
 
@@ -60,18 +54,6 @@ class UnitDemoTests: XCTestCase {
         if let view = showView {
             XCTAssert(view.isMember(of: UIView.self), "view is not member UIView class")
         }
-        
-        vc.hideViewFromWindow()
-        let twiceView = window.viewWithTag(100)
-        XCTAssertNotNil(twiceView, "twiceView is nil")
-        if let tView = twiceView {
-            XCTAssert(tView.isMember(of: UILabel.self), "tView is not member UILabel class")
-        }
-    }
-    
-    func testGenerateView() {
-        let vc = ViewController()
-        vc.showViewToWindow()
     }
 
 }

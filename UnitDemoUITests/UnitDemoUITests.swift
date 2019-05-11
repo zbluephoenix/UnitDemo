@@ -77,7 +77,7 @@ class UnitDemoUITests: XCTestCase {
         gKey.tap()
         gKey.tap()
         
-        let gKey2 = app.keys["G"]
+        let gKey2 = app.keys["g"]
         gKey2.tap()
         gKey2.tap()
         textView.tap()
