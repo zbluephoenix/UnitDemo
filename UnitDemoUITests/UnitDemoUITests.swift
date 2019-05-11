@@ -62,30 +62,5 @@ class UnitDemoUITests: XCTestCase {
         let textView = app.otherElements.containing(.navigationBar, identifier:"UnitDemo.ChildView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
         textView.tap()
         
-        let yKey = app/*@START_MENU_TOKEN@*/.keys["y"]/*[[".keyboards.keys[\"y\"]",".keys[\"y\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        yKey.tap()
-        app/*@START_MENU_TOKEN@*/.keys["r"]/*[[".keyboards.keys[\"r\"]",".keys[\"r\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app/*@START_MENU_TOKEN@*/.keys["h"]/*[[".keyboards.keys[\"h\"]",".keys[\"h\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        textView.tap()
-        
-        let gKey = app/*@START_MENU_TOKEN@*/.keys["g"]/*[[".keyboards.keys[\"g\"]",".keys[\"g\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        gKey.tap()
-        gKey.tap()
-        gKey.tap()
-        
-        let gKey2 = app.keys["g"]
-        gKey2.tap()
-        gKey2.tap()
-        textView.tap()
-        textView.tap()
-        app/*@START_MENU_TOKEN@*/.keys["delete"]/*[[".keyboards.keys[\"delete\"]",".keys[\"delete\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        gKey.tap()
-        gKey.tap()
-        
-        let jKey = app/*@START_MENU_TOKEN@*/.keys["j"]/*[[".keyboards.keys[\"j\"]",".keys[\"j\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        jKey.tap()
-        jKey.tap()
-        
-        
     }
 }
