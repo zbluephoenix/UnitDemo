@@ -46,8 +46,7 @@ class UnitDemoUITests: XCTestCase {
         textView.typeText("测试数据，输入文字")
         
         textView.tap()
-
-        app.menuItems["Select All"].tap()
+        
         textView.typeText("测试数据，输入文字, 重新输入")
 
         app.navigationBars["UnitDemo.ChildView"].buttons["Back"].tap()
